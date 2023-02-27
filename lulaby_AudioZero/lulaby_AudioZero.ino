@@ -35,7 +35,7 @@ void populateSongList() {
   while (entry) {
     filename = String(entry.name());
     isSong = !entry.isDirectory() && !filename.startsWith("_") && (filename.endsWith(".WAV") || filename.endsWith(".wav"));
-    if (!entry.isDirectory() && (filename.endsWith(".WAV") || filename.endsWith(".wav"))) {
+    if (isSong) {
      count++;
     }
     entry.close();
